@@ -1,0 +1,16 @@
+
+ffmpeg -i rtsp://nutanix:test1234@192.168.100.21:8554/Streaming/Channels/101 -c copy -f segment -segment_time 10 "output-%08d.mp4"
+
+ffmpeg -i rtsp://nutanix:test1234@192.168.100.21:8554/Streaming/Channels/101 -c copy -t 5 "output.mp4"
+
+
+
+
+https://hub.docker.com/r/jrottenberg/ffmpeg/dockerfile
+
+
+docker run -d --tmpfs /run:rw,noexec,nosuid,size=65536k my_image
+
+https://superuser.com/questions/1059245/ffmpeg-join-two-mp4-files-with-ffmpeg-on-command-line
+
+https://github.com/akmamun/camera-live-streaming

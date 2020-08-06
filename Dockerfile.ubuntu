@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /app
+WORKDIR /app
+#COPY requirements.txt ./
+#RUN pip install -r requirements.txt
+
+CMD ["/bin/bash"]
